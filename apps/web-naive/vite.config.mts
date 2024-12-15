@@ -4,6 +4,7 @@ export default defineConfig(async () => {
   return {
     application: {},
     vite: {
+      base: '/charts/',
       server: {
         proxy: {
           '/api': {
