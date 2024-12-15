@@ -1,8 +1,4 @@
-import {
-  createRouter,
-  createWebHashHistory,
-  createWebHistory,
-} from 'vue-router';
+import { createRouter, createWebHistory } from 'vue-router';
 
 import { resetStaticRoutes } from '@vben/utils';
 
@@ -13,10 +9,7 @@ import { routes } from './routes';
  *  @zh_CN 创建vue-router实例
  */
 const router = createRouter({
-  history:
-    import.meta.env.VITE_ROUTER_HISTORY === 'hash'
-      ? createWebHashHistory(import.meta.env.VITE_BASE)
-      : createWebHistory(import.meta.env.VITE_BASE),
+  history: createWebHistory(import.meta.env.BASE_URL),
   // 应该添加到路由的初始路由列表。
   routes,
   scrollBehavior: (to, _from, savedPosition) => {
