@@ -14,6 +14,10 @@ export default defineConfig(async () => {
             target: 'http://localhost:5320/api',
             ws: true,
           },
+          '/mock-charts': {
+            changeOrigin: true,
+            target: 'https://39nyx.github.io',
+          },
         },
       },
     },
