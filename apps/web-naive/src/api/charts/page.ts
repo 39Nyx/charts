@@ -6,3 +6,10 @@ export function getChartData(currentPage: number) {
     method: 'get',
   });
 }
+
+export function getChartOptions(cid: string) {
+  return axios({
+    url: `/mock-charts/code/${cid}.json`,
+    method: 'get',
+  });
+}
