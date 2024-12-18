@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import { onMounted, type Ref, ref } from 'vue';
+import { useRouter } from 'vue-router';
 
 import { NInfiniteScroll } from 'naive-ui';
 
@@ -10,6 +11,7 @@ const loading = ref(false);
 const chartList: Ref<any[]> = ref([]);
 
 const currentPage: Ref<number> = ref(0);
+const router = useRouter();
 
 function query() {
   if (loading.value) {
@@ -35,13 +37,31 @@ onMounted(() => {
 function imgUrl(name: string) {
   return `/mock-charts/thumbnail/${name}.png`;
 }
+
+function selectCharts(chart: any) {
+  router.push({
+    name: 'ChartsPreview',
+    query: {
+      cid: chart.cid,
+    },
+  });
+}
 </script>
 
 <template>
   <div ref="container" class="my-app-container">
-    <NInfiniteScroll :style="{ height: 'calc(100vh - 112px)' }" @load="query">
+    <NInfiniteScroll
+      :distance="30"
+      :style="{ height: 'calc(100vh - 112px)' }"
+      @load="query"
+    >
       <div class="chart-container">
-        <div v-for="item in chartList" :key="item.cid" class="chart-item">
+        <div
+          v-for="item in chartList"
+          :key="item.cid"
+          class="chart-item"
+          @click="selectCharts(item)"
+        >
           <div class="chart-img-container">
             <img :src="imgUrl(item.cid)" alt="chart" class="chart-img" />
           </div>
