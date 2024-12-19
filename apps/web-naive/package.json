@@ -42,9 +42,14 @@
     "@vben/utils": "workspace:*",
     "@vueuse/core": "catalog:",
     "axios": "^1.7.9",
+    "echarts": "^5.5.1",
+    "monaco-editor": "^0.52.2",
     "naive-ui": "catalog:",
     "pinia": "catalog:",
     "vue": "catalog:",
     "vue-router": "catalog:"
+  },
+  "devDependencies": {
+    "@types/echarts": "^4.9.22"
   }
 }
