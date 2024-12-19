@@ -5,7 +5,7 @@ export function chartHtml() {
 export function drawChart(codeValue: string) {
   return innerScripts(`
   (() => {
-    let option;
+    var option;
     ${codeValue};
     const div = document.querySelector('#chart');
     if (div) {
@@ -21,6 +21,7 @@ export function drawChart(codeValue: string) {
 export function externalScripts() {
   const urls = [
     'https://cdn.jsdelivr.net/npm/echarts@5.5.1/dist/echarts.min.js',
+    'https://registry.npmmirror.com/jquery/3.7.1/files/dist/jquery.min.js',
   ];
   return urls.map((url) => `<script src="${url}"></script>`).join('');
 }
