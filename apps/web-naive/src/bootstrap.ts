@@ -6,6 +6,7 @@ import { initStores } from '@vben/stores';
 import '@vben/styles';
 
 import { useTitle } from '@vueuse/core';
+import lazyPlugin from 'vue3-lazy';
 
 import { $t, setupI18n } from '#/locales';
 
@@ -29,6 +30,7 @@ async function bootstrap(namespace: string) {
 
   // 配置路由及路由守卫
   app.use(router);
+  app.use(lazyPlugin, {});
 
   // 动态更新标题
   watchEffect(() => {
