@@ -22,6 +22,7 @@ export function externalScripts() {
   const urls = [
     'https://cdn.jsdelivr.net/npm/echarts@5.5.1/dist/echarts.min.js',
     'https://registry.npmmirror.com/jquery/3.7.1/files/dist/jquery.min.js',
+    'https://registry.npmmirror.com/echarts-liquidfill/3.1.0/files/dist/echarts-liquidfill.min.js',
   ];
   return urls.map((url) => `<script src="${url}"></script>`).join('');
 }
