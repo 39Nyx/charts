@@ -1,5 +1,6 @@
 import { defineConfig } from '@vben/vite-config';
 
+
 export default defineConfig(async () => {
   return {
     application: {},
@@ -16,7 +17,7 @@ export default defineConfig(async () => {
           },
           '/mock-charts': {
             changeOrigin: true,
-            target: 'https://39nyx.github.io',
+            target: 'http://localhost:5173',
           },
         },
       },
