@@ -9,7 +9,7 @@ export function getChartData(currentPage: number) {
 
 export function getChartOptions(cid: string) {
   return axios({
-    url: `/mock-charts/code/${[...cid].slice(2, 4).join('/')}/${cid}.json`,
+    url: `/mock-charts/code/${[...cid].slice(2, 4).join('/').toLowerCase()}/${cid}.json`,
     method: 'get',
   });
 }
