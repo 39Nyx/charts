@@ -38,6 +38,23 @@ const routes: RouteRecordRaw[] = [
         meta: {
           icon: 'carbon:workspace',
           title: $t('page.charts.title'),
+          keepAlive: true,
+        },
+      },
+      {
+        name: 'ChartsPreview',
+        path: '/charts/preview',
+        component: () => import('#/views/dashboard/preview/preview.vue'),
+        meta: {
+          icon: 'carbon:workspace',
+          title: $t('page.charts.title'),
+          keepAlive: true,
+          hideInMenu: true,
+        },
+        props: (route) => {
+          return {
+            cid: route.query.cid,
+          };
         },
       },
     ],
