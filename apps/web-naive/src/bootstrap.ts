@@ -9,6 +9,7 @@ import '@vben/styles';
 import '@vben/styles/naive';
 
 import { useTitle } from '@vueuse/core';
+import lazyPlugin from 'vue3-lazy';
 
 import { $t, setupI18n } from '#/locales';
 
@@ -51,6 +52,7 @@ async function bootstrap(namespace: string) {
 
   // 配置路由及路由守卫
   app.use(router);
+  app.use(lazyPlugin, {});
 
   // 配置Motion插件
   app.use(MotionPlugin);
