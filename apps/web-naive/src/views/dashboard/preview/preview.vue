@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { onMounted, ref, type Ref } from 'vue';
+import { onActivated, onMounted, ref, type Ref } from 'vue';
 
 import { getChartOptions } from '#/api/charts/page';
 import { iframeValue } from '#/utils/executeScript';
@@ -25,33 +25,34 @@ onMounted(() => {
       const contentDocument = iframe.value.contentDocument;
       if (contentDocument) {
         contentDocument.open();
-        contentDocument.write(`${iframeValue(res.data.code, true)}`);
+        contentDocument.write(`${iframeValue(res.data.code)}`);
         contentDocument.close();
-        window.addEventListener('message', (event) => {
-          if (event.origin !== window.origin) {
-            window.console.error(
-              'Received message from untrusted origin:',
-              event.origin,
-            );
-            return;
-          }
-          window.console.log(event.data);
-        });
       }
     }
   });
 });
 
-function runCode(value: string) {
+function codeChanged(newCode: string) {
+  code.value = newCode;
+  runCode();
+}
+
+function runCode() {
   if (iframe.value) {
     const contentDocument = iframe.value.contentDocument;
     if (contentDocument) {
       contentDocument.open();
-      contentDocument.write(`${iframeValue(value)}`);
+      contentDocument.write(`${iframeValue(code.value)}`);
       contentDocument.close();
     }
   }
 }
+
+onActivated(() => {
+  if (code.value) {
+    runCode();
+  }
+});
 </script>
 
 <template>
@@ -59,7 +60,7 @@ function runCode(value: string) {
     <div class="pr-4px pl-4px flex items-center justify-between">
       <div></div>
       <div>
-        <CodeView :code="code" @run-code="runCode" />
+        <CodeView :code="code" @run-code="codeChanged" />
       </div>
     </div>
     <iframe
