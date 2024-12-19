@@ -1,9 +1,10 @@
 <script setup lang="ts">
 import { ref, type Ref } from 'vue';
 
-import * as monaco from 'monaco-editor';
+import { editor } from 'monaco-editor';
 import { NButton, NDrawer, NDrawerContent, NSpace, NTooltip } from 'naive-ui';
 
+import { monaco } from '#/lib/monco';
 import CodeIcon from '#/views/dashboard/preview/components/codeIcon/CodeIcon.vue';
 
 const props = withDefaults(
@@ -14,9 +15,12 @@ const props = withDefaults(
     code: '',
   },
 );
+
 const emit = defineEmits<{
-  (e: 'runCode', code: string);
+  (e: 'runCode', code: string): void;
 }>();
+
+type IStandaloneCodeEditor = editor.IStandaloneCodeEditor;
 
 const lastCode: Ref<string> = ref('');
 const active: Ref<boolean> = ref(false);
@@ -27,7 +31,7 @@ function openDrawer() {
   active.value = true;
 }
 
-let myEditor: monaco.editor.IStandaloneCodeEditor | null = null;
+let myEditor: IStandaloneCodeEditor | null = null;
 
 function drawerEnter() {
   if (container.value) {
@@ -47,7 +51,6 @@ function drawerLeave() {
   if (myEditor?.getValue()) {
     lastCode.value = myEditor.getValue();
   }
-  myEditor?.dispose();
 }
 
 function runCode() {
