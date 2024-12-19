@@ -162,7 +162,7 @@ const showChartList = computed(() => {
           @click="selectCharts(item)"
         >
           <div class="chart-img-container">
-            <img :src="imgUrl(item.cid)" alt="chart" class="chart-img" />
+            <img alt="chart" class="chart-img" v-lazy="imgUrl(item.cid)" />
           </div>
           <div class="chart-title">{{ item.title }}</div>
         </div>
