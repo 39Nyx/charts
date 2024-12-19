@@ -821,6 +821,9 @@ importers:
       vue-router:
         specifier: 'catalog:'
         version: 4.5.0(vue@3.5.13(typescript@5.7.2))
+      vue3-lazy:
+        specifier: 1.0.0-alpha.1
+        version: 1.0.0-alpha.1(vue@3.5.13(typescript@5.7.2))
     devDependencies:
       '@types/echarts':
         specifier: ^4.9.22
@@ -10224,6 +10227,12 @@ packages:
   vue-types@3.0.2:
     resolution: {integrity: sha512-IwUC0Aq2zwaXqy74h4WCvFCUtoV0iSWr0snWnE9TnU18S66GAQyqQbRf2qfJtUuiFsBf6qp0MEwdonlwznlcrw==}
     engines: {node: '>=10.15.0'}
+    peerDependencies:
+      vue: ^3.5.13
+
+  vue3-lazy@1.0.0-alpha.1:
+    resolution: {integrity: sha512-dpjpKK4DC5q+wZVtS/VY3X6pYBJHxRmYanr20s39RB6o6fvbneQ/DNuz37bipYfEdrEvbSZ95Y2SCexuznQNrQ==}
+    engines: {node: '>=6.0.0'}
     peerDependencies:
       vue: ^3.5.13
 
@@ -19919,6 +19928,10 @@ snapshots:
   vue-types@3.0.2(vue@3.5.13(typescript@5.7.2)):
     dependencies:
       is-plain-object: 3.0.1
+      vue: 3.5.13(typescript@5.7.2)
+
+  vue3-lazy@1.0.0-alpha.1(vue@3.5.13(typescript@5.7.2)):
+    dependencies:
       vue: 3.5.13(typescript@5.7.2)
 
   vue@3.5.13(typescript@5.6.3):
