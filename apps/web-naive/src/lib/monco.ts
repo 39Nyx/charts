@@ -54,6 +54,6 @@ self.MonacoEnvironment = {
   },
 };
 
-const monaco = originMonaco;
+const monaco: typeof originMonaco = originMonaco;
 
 export { monaco };
