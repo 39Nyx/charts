@@ -26,7 +26,7 @@ export function externalScripts() {
     'https://registry.npmmirror.com/echarts/5.5.1/files/dist/echarts.min.js',
     'https://registry.npmmirror.com/jquery/3.7.1/files/dist/jquery.min.js',
     'https://registry.npmmirror.com/echarts-liquidfill/3.1.0/files/dist/echarts-liquidfill.min.js',
-    'http://localhost:5173/mock-charts/echarts/registryMap.js',
+    'https://39nyx.github.io/mock-charts/echarts/registryMap.js',
   ];
   return urls.map((url) => `<script src="${url}"></script>`).join('');
 }
