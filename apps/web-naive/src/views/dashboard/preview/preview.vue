@@ -20,12 +20,12 @@ const code: Ref<string> = ref('');
 
 onMounted(() => {
   getChartOptions(props.cid).then((res) => {
-    code.value = res.data.code;
+    code.value = res.data;
     if (iframe.value) {
       const contentDocument = iframe.value.contentDocument;
       if (contentDocument) {
         contentDocument.open();
-        contentDocument.write(`${iframeValue(res.data.code)}`);
+        contentDocument.write(`${iframeValue(res.data)}`);
         contentDocument.close();
       }
     }
