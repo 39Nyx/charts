@@ -16,8 +16,8 @@
   },
   "type": "module",
   "scripts": {
-    "build": "pnpm vite build --mode production",
-    "pred": "pnpm vite build --mode preduction",
+    "build": "pnpm vite build --mode production && node ./scripts/copyIndex.js",
+    "pred": "pnpm vite build --mode preduction && node ./scripts/copyIndex.js",
     "build:analyze": "pnpm vite build --mode analyze",
     "dev": "pnpm vite --mode development",
     "preview": "vite preview",
