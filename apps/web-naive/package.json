@@ -17,7 +17,7 @@
   "type": "module",
   "scripts": {
     "build": "pnpm vite build --mode production",
-    "build:pred": "pnpm vite build --mode preduction",
+    "pred": "pnpm vite build --mode preduction",
     "build:analyze": "pnpm vite build --mode analyze",
     "dev": "pnpm vite --mode development",
     "preview": "vite preview",
