@@ -1,9 +1,7 @@
 import { defineConfig } from '@vben/vite-config';
 
-// eslint-disable-next-line n/no-extraneous-import
 import * as dotenv from 'dotenv';
 
-// 加载 .env 文件
 dotenv.config();
 
 export default defineConfig(async () => {
