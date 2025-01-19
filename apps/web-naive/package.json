@@ -44,7 +44,7 @@
     "@vueuse/core": "catalog:",
     "axios": "^1.7.9",
     "dotenv": "^16.4.7",
-    "echarts": "^5.5.1",
+    "echarts": "^5.6.0",
     "monaco-editor": "^0.52.2",
     "naive-ui": "catalog:",
     "pinia": "catalog:",
@@ -53,6 +53,6 @@
     "vue3-lazy": "1.0.0-alpha.1"
   },
   "devDependencies": {
-    "@types/echarts": "^4.9.22"
+    "@types/echarts": "^5.0.0"
   }
 }
