@@ -93,6 +93,10 @@ const seriesTypes = [
     name: '水球图',
     value: 'liquidFill',
   },
+  {
+    name: '关系图',
+    value: 'graph',
+  },
 ];
 
 const selectedSeriesType: Ref<string[]> = ref(['']);
