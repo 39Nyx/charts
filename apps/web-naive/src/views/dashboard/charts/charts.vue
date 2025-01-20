@@ -1,5 +1,7 @@
 <script setup lang="ts">
-import { computed, onMounted, type Ref, ref } from 'vue';
+import type { Ref } from 'vue';
+
+import { computed, onMounted, ref } from 'vue';
 import { useRouter } from 'vue-router';
 
 import { NInfiniteScroll } from 'naive-ui';
@@ -46,7 +48,7 @@ onMounted(() => {
 });
 
 function imgUrl(name: string) {
-  return `/mock-charts/thumbnail/${name}.png`;
+  return `https://github.39nyx.cn/mock-charts/thumbnail/${name}.png`;
 }
 
 function selectCharts(chart: any) {
