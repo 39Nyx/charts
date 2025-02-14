@@ -48,15 +48,6 @@ const routes: RouteRecordRaw[] = [
           };
         },
       },
-      {
-        name: 'Charts',
-        path: '/charts',
-        component: () => import('#/views/dashboard/charts/charts.vue'),
-        meta: {
-          icon: 'carbon:workspace',
-          title: $t('page.charts.title'),
-        },
-      },
     ],
   },
 ];
