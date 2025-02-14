@@ -53,6 +53,6 @@
     "vue3-lazy": "1.0.0-alpha.1"
   },
   "devDependencies": {
-    "@types/echarts": "^4.9.22"
+    "@types/echarts": "^5.0.0"
   }
 }
