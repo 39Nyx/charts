@@ -474,6 +474,9 @@ catalogs:
     vue-i18n:
       specifier: ^11.1.0
       version: 11.1.0
+    vue-json-viewer:
+      specifier: ^3.0.4
+      version: 3.0.4
     vue-router:
       specifier: ^4.5.0
       version: 4.5.0
@@ -1552,6 +1555,9 @@ importers:
       vue:
         specifier: ^3.5.13
         version: 3.5.13(typescript@5.7.3)
+      vue-json-viewer:
+        specifier: 'catalog:'
+        version: 3.0.4(vue@3.5.13(typescript@5.7.3))
       vue-router:
         specifier: 'catalog:'
         version: 4.5.0(vue@3.5.13(typescript@5.7.3))
@@ -5126,6 +5132,9 @@ packages:
     resolution: {integrity: sha512-nPdaFdQ0h/GEigbPClz11D0v/ZJEwxmeVZGeMo3Z5StPtUTkA9o1lD6QwoirYiSDzbcwn2XcjwmCp68W1IS4TA==}
     engines: {node: '>=18'}
 
+  clipboard@2.0.11:
+    resolution: {integrity: sha512-C+0bbOqkezLIsmWSvlsXS0Q0bmkugu7jcfMIACB+RDEntIzQIkdr148we28AfSloQLRdZlYL/QYyrq05j/3Faw==}
+
   clipboardy@4.0.0:
     resolution: {integrity: sha512-5mOlNS0mhX0707P2I0aZ2V/cmHUEO/fL7VFLqszkhUsxt7RwnmrInf/eEQKlf5GzvYeHIjT+Ov1HRfNmymlG0w==}
     engines: {node: '>=18'}
@@ -5617,6 +5626,9 @@ packages:
   delayed-stream@1.0.0:
     resolution: {integrity: sha512-ZySD7Nf91aLB0RxL4KGrKHBXl7Eds1DAmEdcoVawXnLD7SDhpNgtuII2aAkg7a7QS41jxPSZ17p4VdGnMHk3MQ==}
     engines: {node: '>=0.4.0'}
+
+  delegate@3.2.0:
+    resolution: {integrity: sha512-IofjkYBZaZivn0V8nnsMJGBr4jVLxHDheKSW88PyxS5QC4Vo9ZbZVvhzlSxY87fVq3STR6r+4cGepyHkcWOQSw==}
 
   denque@2.1.0:
     resolution: {integrity: sha512-HVQE3AAb/pxF8fQAoiqpvg9i3evqug3hoiwakOyZAwJm+6vZehbkYXZ0l4JxS+I3QxM97v5aaRNhj8v5oBhekw==}
@@ -6479,6 +6491,9 @@ packages:
 
   globjoin@0.1.4:
     resolution: {integrity: sha512-xYfnw62CKG8nLkZBfWbhWwDw02CHty86jfPcc2cr3ZfeuK9ysoVPPEUxf21bAD/rWAgk52SuBrLJlefNy8mvFg==}
+
+  good-listener@1.2.2:
+    resolution: {integrity: sha512-goW1b+d9q/HIwbVYZzZ6SsTr4IgE+WA44A0GmPIQstuOrgsFcT7VEJ48nmr9GaRtNu0XTKacFLGnBPAM6Afouw==}
 
   gopd@1.2.0:
     resolution: {integrity: sha512-ZUKRh6/kUFoAiTAtTYPZJ3hw9wNxx+BIBOijnlG9PnrJsCcSjs1wyyD6vJpaYtgnzDrKYRSqf3OO6Rfa93xsRg==}
@@ -8884,6 +8899,9 @@ packages:
   seemly@0.3.9:
     resolution: {integrity: sha512-bMLcaEqhIViiPbaumjLN8t1y+JpD/N8SiyYOyp0i0W6RgdyLWboIsUWAbZojF//JyerxPZR5Tgda+x3Pdne75A==}
 
+  select@1.1.2:
+    resolution: {integrity: sha512-OwpTSOfy6xSs1+pwcNrv0RBMOzI39Lp3qQKUTPVVPRjCdNa5JH/oPRiqsesIskK8TVgmRiHwO4KXlV2Li9dANA==}
+
   semver-compare@1.0.0:
     resolution: {integrity: sha512-YM3/ITh2MJ5MtzaM429anh+x2jiLVjqILF4m4oyQB18W7Ggea7BfqdH/wGMK7dDiMghv/6WG7znWMwUDzJiXow==}
 
@@ -9412,6 +9430,9 @@ packages:
 
   through@2.3.8:
     resolution: {integrity: sha512-w89qg7PI8wAdvX60bMDP+bFoD5Dvhm9oLheFp5O4a2QF0cSBGsBX4qZmadPMvVqlLJBBci+WqGGOAPvcDeNSVg==}
+
+  tiny-emitter@2.1.0:
+    resolution: {integrity: sha512-NB6Dk1A9xgQPMoGqC5CVXn123gWyte215ONT5Pp5a0yt4nlEoO1ZWeCwpncaekPHXO60i47ihFnZPiRPjRMq4Q==}
 
   tinybench@2.9.0:
     resolution: {integrity: sha512-0+DUvqWMValLmha6lr4kD8iAMK1HzV0/aKnCtWb9v9641TnP/MFb7Pc2bxoxQjTXAErryXVgUOfv2YqNllqGeg==}
@@ -10007,6 +10028,11 @@ packages:
   vue-i18n@11.1.0:
     resolution: {integrity: sha512-UgtYUe99mLfo7ya5TJSsJcgJZaqIunwXjff5UA03xRry0VtgN4zIUbuoycK9/ZZQJg5Cmr6V6zq+u0H0P0hlNw==}
     engines: {node: '>= 16'}
+    peerDependencies:
+      vue: ^3.5.13
+
+  vue-json-viewer@3.0.4:
+    resolution: {integrity: sha512-pnC080rTub6YjccthVSNQod2z9Sl5IUUq46srXtn6rxwhW8QM4rlYn+CTSLFKXWfw+N3xv77Cioxw7B4XUKIbQ==}
     peerDependencies:
       vue: ^3.5.13
 
@@ -14155,6 +14181,12 @@ snapshots:
       slice-ansi: 5.0.0
       string-width: 7.2.0
 
+  clipboard@2.0.11:
+    dependencies:
+      good-listener: 1.2.2
+      select: 1.1.2
+      tiny-emitter: 2.1.0
+
   clipboardy@4.0.0:
     dependencies:
       execa: 8.0.1
@@ -14655,6 +14687,8 @@ snapshots:
   defu@6.1.4: {}
 
   delayed-stream@1.0.0: {}
+
+  delegate@3.2.0: {}
 
   denque@2.1.0: {}
 
@@ -15720,6 +15754,10 @@ snapshots:
       unicorn-magic: 0.1.0
 
   globjoin@0.1.4: {}
+
+  good-listener@1.2.2:
+    dependencies:
+      delegate: 3.2.0
 
   gopd@1.2.0: {}
 
@@ -18190,6 +18228,8 @@ snapshots:
 
   seemly@0.3.9: {}
 
+  select@1.1.2: {}
+
   semver-compare@1.0.0: {}
 
   semver@5.7.2: {}
@@ -18836,6 +18876,8 @@ snapshots:
   throttle-debounce@5.0.2: {}
 
   through@2.3.8: {}
+
+  tiny-emitter@2.1.0: {}
 
   tinybench@2.9.0: {}
 
@@ -19539,6 +19581,11 @@ snapshots:
       '@intlify/core-base': 11.1.0
       '@intlify/shared': 11.1.0
       '@vue/devtools-api': 6.6.4
+      vue: 3.5.13(typescript@5.7.3)
+
+  vue-json-viewer@3.0.4(vue@3.5.13(typescript@5.7.3)):
+    dependencies:
+      clipboard: 2.0.11
       vue: 3.5.13(typescript@5.7.3)
 
   vue-router@4.5.0(vue@3.5.13(typescript@5.7.3)):
